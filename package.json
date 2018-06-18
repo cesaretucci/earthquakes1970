@@ -1,0 +1,74 @@
+{
+  "name": "angular2-marsh-starter",
+  "version": "0.1.0",
+  "description": "Mapping project",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server --baseDir './public' --files './public/**/*.html' './public/**/*.css' './public/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haoliangyu/angular2-grunt-starter.git"
+  },
+  "keywords": [
+    "angular2",
+    "grunt",
+    "leaflet"
+  ],
+  "author": "Liliana Mamani Sanchez",
+  "contributors": [
+    "Andrea Fedele"
+  ],
+  "credits": "Haoliang Yu <haholiang.yu@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haoliangyu/angular2-grunt-starter/issues"
+  },
+  "homepage": "https://github.com/haoliangyu/angular2-grunt-starter#readme",
+  "dependencies": {
+    "@angular/common": "2.1.1",
+    "@angular/compiler": "2.1.1",
+    "@angular/core": "2.1.1",
+    "@angular/forms": "2.1.1",
+    "@angular/http": "2.1.1",
+    "@angular/platform-browser": "2.1.1",
+    "@angular/platform-browser-dynamic": "2.1.1",
+    "d3": "^3.5.17",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.35.0",
+    "font-awesome": "^4.5.0",
+    "leaflet": "^0.7.7",
+    "leaflet-minimap": "3.5.0",
+    "leaflet.heat": "0.2.0",
+    "leaflet.markercluster": "0.5.0",
+    "moment": "^2.15.2",
+    "mydaterangepicker": "^4.1.8",
+    "ng2-completer": "1.2.2",
+    "ng2-datetime": "^1.2.1",
+    "ng2-typeahead": "^1.0.0",
+    "ngx-bootstrap": "0.0.1",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "^0.19.9",
+    "typescript": "^1.8.10",
+    "zone.js": "0.6.25"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "angular-2-dropdown-multiselect": "^0.2.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.0",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.22.0",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.0",
+    "to-string-loader": "^1.1.3",
+    "ts-loader": "^0.7.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-sources": "^0.1.0"
+  }
+}
