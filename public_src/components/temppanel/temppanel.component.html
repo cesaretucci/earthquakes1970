@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading">By date range</div>
+    <div class="panel-body">
+    
+
+    <form #myForm="ngForm" novalidate>
+      <my-date-range-picker name="mydaterange" 
+                [options]="myDateRangePickerOptions"
+                [placeholder]="'Select a date range'"
+                (dateRangeChanged)="onDateRangeChanged($event)"  
+                (inputFieldChanged)="onInputFieldChanged($event)" 
+                [(ngModel)]="model" required>
+      </my-date-range-picker>
+    </form>
+
+    <div [style.visibility]="(isValid == true) ? 'hidden' : 'visible'" class="text-danger"> Select a valid date range. </div>
+    <button type="button" class="btn btn-primary btn-block" [disabled]="isSliderBoxChecked"  (click)="resetTimeRange()" >Reset original date range</button>
+    <span> <input type="checkbox" [checked]="isSliderBoxChecked"  (click)="showTimeline()" id="checkBoxDivSlider"> Dynamic temporal selection </span>
+    
+    </div>
+</div>

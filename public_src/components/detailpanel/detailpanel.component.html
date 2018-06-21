@@ -1,0 +1,75 @@
+
+<!--> READERS TABLE CONTENT <!-->
+<div class="panel panel-primary" [hidden]="!active">
+    <div class="panel-heading">
+        <div class="panel-title"> {{resultsNumber == 0 ? 'No results' : resultNumberstring }}
+            <span class="scroll"> {{resultsNumber == 0 ? '' : 'Scroll and click on a row to see more details' }} </span>
+        </div>
+    </div>
+
+    <div class="panel-body">
+    
+        <div class="row ">
+        
+            <div class="col-sm-3 resumeField well"> 
+                <b> Selected criteria </b> 
+                <hr>
+
+                Place ({{placeTableSelected}}): <b> {{streetName}} </b> <br>
+                Last name: <b> {{readerName}} </b> <br>
+                Data range: <b> {{rangeFormatted}} </b>
+            </div>
+            
+
+            <div class="col-sm-9 ">
+                
+                    <table class="table myTable" [style.visibility]="(resultsNumber == 0) ? 'hidden' : 'visible' ">
+                        <thead> 
+                            <tr>
+                                <th>Title</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Suffix</th>
+                                <th>Visit date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let record of records; let i=index" (click)="showPopUp(record,modal1)" 
+                            [ngClass]="{'myclass': selectedIndex[i]==i}">
+                                <td>{{record.title_prefix}}</td>
+                                <td>{{record.forenames}}</td>
+                                <td>{{record.surnames}}</td>
+                                <td>{{record.suffix}}</td>
+                                <td>{{record.readabledate}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                
+            </div> <!--closing col-sm-9 -->
+
+
+        </div> <!--> closing row <!-->
+
+
+    </div><!-- closing panel body -->
+
+</div><!--closing panel-->
+<!--> READERS TABLE CONTENT CLOSED <!-->
+
+
+
+
+<!--> MODAL CONTENT OPENED ON THE ROW CLICK<!-->
+<app-modal #modal1>
+
+    <div class="app-modal-header"> </div>
+
+    <div class="app-modal-body"> </div>
+
+    <div class="app-modal-footer">
+        <button type="button" class="btn btn-danger btn-block"  (click)="modal1.hide()">Close</button>
+    </div>
+</app-modal>
+<!--> MODAL CONTENT CLOSED <!-->

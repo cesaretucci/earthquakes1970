@@ -1,0 +1,9 @@
+
+<!-->
+<div class="col-xs-6">
+    <label>{{label}}</label>
+<input class="datepicker_input" [(ngModel)]="dateModel" (ngModelChange)="dateModel = Dateconversion.transform($event)" class="form-control"   (focus)="showPopup()" />
+</div>
+
+<datepicker class="popup" *ngIf="showDatepicker" [(ngModel)]="dateModel" [showWeeks]="false" [minDate]="minDate"  [maxDate]="minDate" (ngModelChange)="hidePopup($event)" ></datepicker> 
+<!-->

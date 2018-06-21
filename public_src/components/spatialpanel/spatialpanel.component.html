@@ -1,0 +1,61 @@
+<div class="panel panel-default">
+  <div class="panel-heading">By place</div>
+
+  <div class="panel-body">
+
+    <my-tabs (selectedT)="panelChanged($event.selectedTab)" >
+
+        <my-tab tabTitle="Streets" class="Streets">
+            <div>
+              <br>
+
+              <ng2-completer #streetInput [(ngModel)]="searchStr" [dataService]="dataService" [minSearchLength]="0" 
+              [autofocus]="focusStreet"
+              (selected)="onStreetSelected($event)" [placeholder]="'Street name...'" [pause]="800">
+              </ng2-completer>
+
+            </div>
+          </my-tab>
+        
+
+        
+          <my-tab tabTitle="Dublin Regions/Districts" class="Dublin Regions/Districts">
+            <div>
+              <br>
+              
+              <ng2-completer [(ngModel)]="searchRegion" [dataService]="" [minSearchLength]="0" 
+              (selected)="onStreetSelected($event)" [placeholder]="'Dublin region/district..'" [pause]="800">
+              </ng2-completer>
+
+            </div>
+          </my-tab>
+        
+      
+        
+        <my-tab tabTitle="County" class="County">
+          <div>
+            <br>
+            <ng2-completer [(ngModel)]="searchCounty" [dataService]="dataServiceCounty" [minSearchLength]="0" 
+            (selected)="onStreetSelected($event)" [placeholder]="'County...'" [pause]="800">
+            </ng2-completer>
+
+          </div>
+        </my-tab>
+
+
+         <my-tab tabTitle="Country" class="Country">
+          <div>
+            <br>
+            <ng2-completer [(ngModel)]="searchCountry" [dataService]="dataServiceCountry" [minSearchLength]="0" 
+            (selected)="onStreetSelected($event)" [placeholder]="'Country...'" [pause]="800">
+            </ng2-completer>
+
+          </div>
+        </my-tab>
+    </my-tabs>
+
+
+
+
+  </div>
+</div>

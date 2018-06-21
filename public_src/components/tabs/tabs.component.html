@@ -1,0 +1,7 @@
+<ul class="nav nav-pills mynavs">
+	<li *ngFor="let tab of tabs; let i=index" [ngClass]="{'active': selectedTabIndex == i}">
+		<a href="#" (click)="selectTab(tab,i)">{{tab.tabTitle}}</a>
+	</li>
+</ul>
+		
+<ng-content></ng-content>

@@ -1,0 +1,9 @@
+<h4> Data visualisation techniques </h4>
+<div class="panel panel-default">
+    
+    <div class="panel-body">
+		<div *ngFor="let item of tradeSources">
+    		<input type="checkbox" [(ngModel)]="item.checked" (change)="update(item)"> {{item.name}} 
+    	</div>
+	</div>
+</div>
